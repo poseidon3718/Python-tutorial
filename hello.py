@@ -191,11 +191,65 @@ my_function("Emil")
 my_function("Tobias")
 my_function("Linus")
 
-x = lambda a : a * a
+
+# 함수를 여러개 정의해서 순서대로 대입
+def my_function(fname, lname):
+  print(fname + " " + lname)
+
+my_function("Emil", "Refsnes")
+# 단, 다음과 같이 작성 시 지정된 값이 하나여서 오류가 발생함.
+# def my_function(fname, lname):
+#   print(fname + " " + lname)
+# my_function("Emil", "Refsnes")
+
+
+# 함수 안에 여러개의 값을 한 번에 지정하고 그중 몇 번째 값을 출력할지 지정
+def my_function(*kids):
+  print("The youngest child is " + kids[2])
+
+my_function("Emil", "Tobias", "Linus")
+
+# 함수 안에 여러개의 값을 한 번에 지정 후 함수 안의 어떤 값을 출력할지 지정
+def my_function(**kid):
+  print("His last name is " + kid["lname"])
+
+my_function(fname = "Tobias", lname = "Refsnes")
+
+# 지정된 값이 없는 경우 빈 곳에 고정 값을 넣어서 출 
+def my_function(country = "Norway"):
+  print("I am from " + country)
+
+my_function("Sweden")
+my_function("India")
+my_function()
+my_function("Brazil")
+
+# 리스트를 추가하는 방법
+def my_function(food):
+  for x in food:
+    print(x)
+
+fruits = ["apple", "banana", "cherry"]
+
+my_function(fruits)
+
+# 리턴 함수를 통해 수식을 계산하는 방법
+def my_function(x):
+  return 5 * x
+
+print(my_function(3))
+print(my_function(5))
+print(my_function(9))
+
+
+# lambda: 지정된 값에 대한 수식을 정리하여 간단히 표현 가능
+
+# lambda 함수로 제곱 표현하기
+x = lambda a : a * a      # a: a ** 2
 print(x(10))
 
 
-
+# 
 
 
 
