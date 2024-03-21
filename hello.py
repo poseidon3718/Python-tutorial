@@ -191,7 +191,7 @@ my_function("Emil")
 my_function("Tobias")
 my_function("Linus")
 
-x = lambda a : a^2
+x = lambda a : a * a
 print(x(10))
 
 
