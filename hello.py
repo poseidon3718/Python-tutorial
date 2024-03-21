@@ -181,7 +181,18 @@ if "expensive" not in txt2:
   print("No, 'expensive' is NOT present.")
 
 
+# def: 함수 정의할 때
 
+# 여러개의 값을 지정할 수 있다.
+def my_function(fname):
+  print(fname + " Refsnes")
+
+my_function("Emil")
+my_function("Tobias")
+my_function("Linus")
+
+x = lambda a : a^2
+print(x(10))
 
 
 
